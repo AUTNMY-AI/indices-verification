@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "indices-verification"
+version = "0.1.0"
+description = "Independently verify The Road to Autonomy Indices: integrity and timing of every published index value."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "AUTNMY AI, Inc." }]
+keywords = ["merkle", "rfc3161", "timestamp", "verification", "transparency", "autonomy", "indices"]
+dependencies = [
+  "rfc8785==0.1.4",
+  "rfc3161-client==1.0.6",
+  "cryptography>=42",
+]
+
+[project.scripts]
+indices-verify = "indices_verification.cli:main"
+
+[project.urls]
+Homepage = "https://indices.roadtoautonomy.com/verification/"
+Source = "https://github.com/AUTNMY-AI/indices-verification"
+
+[tool.setuptools]
+packages = ["indices_verification"]
