@@ -5,8 +5,7 @@ Independently verify **The Road to Autonomy Indices**.
 Every twelve hours, each published index value is sealed and its Merkle root is
 time-stamped by independent RFC 3161 Time-Stamping Authorities. Using only the
 public files for a sealed cycle, this tool recomputes the root from the
-published values and confirms it matches the externally anchored timestamp. **No
-trust in AUTNMY AI is required.**
+published values and confirms it matches the externally anchored timestamp.
 
 It proves exactly two things, and only these two:
 
