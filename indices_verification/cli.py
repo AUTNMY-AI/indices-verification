@@ -50,6 +50,7 @@ def _ordered_leaf_bytes(cells_doc: dict) -> Tuple[List[bytes], List[dict]]:
             composite=c["composite"],
             pillars=c["pillars"],
             computed_at_utc=c["computed_at_utc"],
+            cadence=c.get("cadence", C.CADENCE),
         )
         leaves.append(leaf)
     leaves.sort(key=lambda lf: (lf["index"], lf["operator"]))
